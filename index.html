@@ -10,9 +10,16 @@
 <body>
     <div class="box">
         <h4>VOWEL COUNTER</h4>
-        <textarea id="textarea" onkeyup="countVowel(this.value);"> </textarea>
+        <!-- <textarea id="textarea" onkeyup="countVowel(this.value);">  -->
+         <textarea id="textArea" onkeyup="countVowel(this.value);
+          getWordCount(this.value);
+           getCharacterCount(this.value)"></textarea>
+        <!-- </textarea> -->
         <p>
             VOWEL <span id="vowelCount"> 0</span>
+            character <span id="characterCount"> 0</span>
+            word <span id="wordCount"> 0</span>
+
         </p> 
    </div>
       <script src="script.js"></script>
