@@ -4,24 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/icon.png">
     <link rel="stylesheet" href="style.css">
-    <title>VOWEL COUNTER | javaScript</title>
+    <title>VOWEL COUNTER | JAVASCRIPT</title>
 </head>
 <body>
-    <div class="box">
-        <h4>VOWEL COUNTER</h4>
-        <!-- <textarea id="textarea" onkeyup="countVowel(this.value);">  -->
-         <textarea id="textArea" onkeyup="countVowel(this.value);
-          getWordCount(this.value);
-           getCharacterCount(this.value)"></textarea>
-        <!-- </textarea> -->
-        <p>
-            VOWEL <span id="vowelCount"> 0</span>
-            character <span id="characterCount"> 0</span>
-            word <span id="wordCount"> 0</span>
+    <div class="box index">
+        <div class="textbox">
+            <h4>VOWEL COUNTER</h4>
+        </div>
+        
+        <div class="textbox2">
+            <!-- <textarea id="textarea" onkeyup="countVowel(this.value);">  -->
+            <textarea class="textArea" placeholder="Type here..." id="textArea" onkeyup="countVowel(this.value);
+            getWordCount(this.value);
+            getCharacterCount(this.value)"></textarea>
+            <!-- </textarea> -->
+            
+            <div class="tb2">
+                CHAR <span id="characterCount"> 0</span>
+                VOWEL <span id="vowelCount"> 0</span>
+                WORD <span id="wordCount"> 0</span>
 
-        </p> 
-   </div>
-      <script src="script.js"></script>
+            </div> 
+        </div>
+    </div>
+
+    <img id="myDiv" class="index" src="images/d.png" alt="">
+
+    <script src="script.js"></script>
 </body>
 </html>
