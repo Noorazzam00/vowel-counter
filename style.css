@@ -1,126 +1,147 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-
-
-*{
-    position: relative;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
+:root {
+  --pink: #ff00ff;
+  --white: #fff;
+  --shadow: #3b3b3b36;
+  --blue: #56dfd3;
+  --grey: #555;
 }
 
-body{
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(#d94b9e , #d8d8e5 );
-    /* font-family: ; */
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.box{
-    position: relative;
-    width: 750px;
-    background: #fff;
-    border-radius: 20px;
-    padding: 20px;
-
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins";
+  background-color: var(--pink);
 }
+
+.box {
+  width: 750px;
+  background: var(--white);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 1px 20px 15px var(--shadow);
+}
+
 .box h4 {
-    color: #555;
-    margin-bottom:10px ;
-    font-size: 2rem;
-    letter-spacing: 1px; 
-    text-transform: uppercase;
-
+  background-image: linear-gradient(var(--pink), var(--blue));
+  padding: 10px;
+  width: 50%;
+  color: var(--white);
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
 }
-.box textarea{
-    position: relative;
-    width: 80% !important;
-    height: 250px;
-    resize:none;
-    border-radius: 20px; 
-    border: 1px solid rgba(0, 0, 0, .2);
-    outline: none;
-    padding: 10px;
-    font-size: 1.5rem;
-    color: #555;
 
+.box textarea {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  resize: none;
+  border-radius: 10px;
+  border: 1px solid var(--shadow);
+  outline: none;
+  padding: 10px;
+  font-size: 1.5rem;
+  color: var(--grey);
 }
+
+.textbox2 {
+  display: flex;
+  align-items: center;
+}
+
+.tb2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.tb2 span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  color: var(--white);
+  border-radius: 50%;
+  background: linear-gradient(var(--pink), var(--blue));
+  transition: all 0.5s;
+}
+
+.textbox {
+  flex: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.index {
+  z-index: 10;
+}
+
 .box p {
-    position: absolute;
-    right: 32px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    font-size: 2rem;
-    color: #555;
-
-}
-.box p span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80px;
-    height: 80px;
-    color: #fff;
-    border-radius: 50%;
-    background:  #ec95e9;
-    transition: all .5s;
-}
-.box p span.blink{
-    box-shadow: 0px 0px 6px #6565e7,
-                0px 0px 12px #6565e7,
-                0px 0px 18px #6565e7,
-                0px 0px 24px #6565e7;
-
+  flex: 1;
 }
 
+@media (max-width: 768px) {
+  .box {
+    width: 580px;
+  }
 
-@media (max-width: 768px) { 
-    .box{
-        width: 580px;
-    }
-    
-    .box p{
-        font-size: 1.5rem;
-        right: 26px;
-
-
-    }
-
+  .box p {
+    right: 26px;
+  }
 }
 
+@media (max-width: 600px) {
+  .box {
+    width: 300px;
+  }
 
-@media (max-width: 600px) { 
-    .box{
-        width: 300px;
-    }
+  .boX textarea {
+    width: 100% !important;
+  }
 
-    .boX h4{
-        font-size: 1.5rem;
-    }
-    
-    .boX textarea{
-       width:100% !important; ;
-
-    }
-    .box p {
-        position: relative;
-        top: 0;
-        right: 0;
-        transform: translateY(0);
-        margin-bottom: 10px;
-        margin-top: 5px;
-
-    }
-
+  .box p {
+    position: relative;
+    top: 0;
+    right: 0;
+    transform: translateY(0);
+    margin-bottom: 10px;
+    margin-top: 5px;
+  }
 }
 
+#myDiv {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  margin: auto;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  animation: mymove 8s infinite;
+}
 
+@keyframes mymove {
+  100% {
+    transform: rotate(360deg);
+  }
+}
